@@ -1,12 +1,20 @@
 <template>
 	<div>
 		<h1>Todos</h1>
+		<div v-for="(todo, index) in p_todos" :key="index">
+			<TodoItem :todos="todo"/>
+		</div>
 	</div>
 </template>
 
 <script>
+	import TodoItem from './TodoItem.vue'
 	export default {
-		name: "Todos"
+		name: "Todos",
+		components: {
+			TodoItem
+		},
+		props: ["p_todos"]
 	}
 </script>
 

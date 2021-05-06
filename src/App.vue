@@ -1,6 +1,6 @@
 <template>  
 <div id="app">
-  <Todos />
+  <Todos :p_todos="todos" />
 </div>
 </template>
 
@@ -26,7 +26,7 @@ import Todos from './components/Todos'
           completed: true
         },
         {
-          id: 1,
+          id: 3,
           title: 'Todo Three',
           completed: false
         }
