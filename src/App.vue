@@ -1,7 +1,7 @@
 <template>  
 <div id="app">
   <Header />
-  <AddTodo />
+  <AddTodo @em-sendTodo="submitTodo"/>
   <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
 </div>
 </template>
@@ -40,6 +40,9 @@ import AddTodo from './components/layouts/AddTodo'
       }
     },
     methods: {
+      submitTodo(data){
+        this.todos.push(data)
+      },
       deleteTodo(id){
         this.todos = this.todos.filter(todos => todos.id !== id)
       }
