@@ -1,6 +1,6 @@
 <template>  
 <div id="app">
-  <Todos :p_todos="todos" />
+  <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
 </div>
 </template>
 
@@ -31,6 +31,12 @@ import Todos from './components/Todos'
           completed: false
         }
         ]
+      }
+    },
+    methods: {
+      deleteTodo(id){
+        console.log('ea')
+        this.todos = this.todos.filter(todos => todos.id !== id)
       }
     }
   }

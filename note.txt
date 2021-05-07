@@ -1,0 +1,1 @@
+1. Kalau nerima emit dari chile ke parent harus dimulai dengan tanda "@" bukan ":"
