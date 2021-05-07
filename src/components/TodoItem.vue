@@ -32,6 +32,7 @@
 		border-bottom: 1px #ccc dotted;
 		margin: 5px;
 		border-radius: 5px;
+		text-align: left;
 	}
 	.todo-item:hover{
 		background: #d1d1d1;

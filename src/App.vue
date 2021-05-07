@@ -1,54 +1,38 @@
-<template>  
-<div id="app">
-  <Header />
-  <AddTodo @em-sendTodo="submitTodo"/>
-  <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
-</div>
+<template>
+  <div id="app">
+    <Header />
+  <router-view/>
+  </div>
 </template>
 
 <script>
-import Todos from './components/Todos'
-import Header from './components/layouts/Header'
-import AddTodo from './components/layouts/AddTodo'
-import axios from 'axios'
-
-  export default {
-    name: 'App',
+  import Header from './components/layouts/Header'
+  export default{
+    name: "App",
     components: {
-      Todos,
-      Header,
-      AddTodo
-    },
-    created(){
-      axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20')
-            .then(res => this.todos = res.data)
-            .catch(err => console.log(err))
-    },
-    data(){
-      return {
-        todos: []
-      }
-    },
-    methods: {
-      submitTodo(data){
-        this.todos.push(data)
-      },
-      deleteTodo(id){
-        this.todos = this.todos.filter(todos => todos.id !== id)
-      }
+      Header
     }
   }
 </script>
-
 <style>
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-body{
-  font-family: Arial, Helvatica, sans-serif;
-  line-height: 1.4;
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
