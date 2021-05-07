@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<h1>Todos</h1>
 		<div v-for="(todo, index) in p_todos" :key="index">
 			<TodoItem :todos="todo" @emDelTodo="$emit('emDelTodo2', todo.id)"/>
 		</div>

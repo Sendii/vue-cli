@@ -1,16 +1,22 @@
 <template>  
 <div id="app">
+  <Header />
+  <AddTodo />
   <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
 </div>
 </template>
 
 <script>
 import Todos from './components/Todos'
+import Header from './components/layouts/Header'
+import AddTodo from './components/layouts/AddTodo'
 
   export default {
     name: 'App',
     components: {
-      Todos
+      Todos,
+      Header,
+      AddTodo
     },
     data(){
       return {
@@ -27,7 +33,7 @@ import Todos from './components/Todos'
         },
         {
           id: 3,
-          title: 'Todo Three',
+          title: 'Todo Threes',
           completed: false
         }
         ]

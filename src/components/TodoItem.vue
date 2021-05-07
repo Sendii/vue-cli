@@ -20,7 +20,7 @@
 		},
 		methods: {
 			markComplete(){
-				this.todoLocal.completed = !this.todoLocal.completed
+				this.todoLocal.completed = (this.todoLocal.completed ? false : true)
 			}
 		}
 	}
