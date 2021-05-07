@@ -33,11 +33,14 @@
 <style scoped>
 form{
 	display: flex;
-	margin: 5px;
+	margin: 10px 20px 0 20px;
 }
 input[type="text"]{
 	flex: 10;
 	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #6b6b6a;
+	margin-right: 15px;
 }
 .btn-submit{
 	display: inline-block;

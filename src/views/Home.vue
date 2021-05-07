@@ -1,15 +1,17 @@
 <template>  
-<div id="app">
-  
-  <AddTodo @em-sendTodo="submitTodo"/>
-  <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
-</div>
+  <div id="app">
+
+      <AddTodo @em-sendTodo="submitTodo"/>
+    <div class="card">
+      <Todos :p_todos="todos" @emDelTodo2="deleteTodo"/>
+    </div>
+  </div>
 </template>
 
 <script>
-import Todos from '../components/Todos'
-import AddTodo from '../components/layouts/AddTodo'
-import axios from 'axios'
+  import Todos from '../components/Todos'
+  import AddTodo from '../components/layouts/AddTodo'
+  import axios from 'axios'
   export default {
     name: 'Home',
     components: {
@@ -19,8 +21,8 @@ import axios from 'axios'
     },
     created(){
       axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20')
-            .then(res => this.todos = res.data)
-            .catch(err => console.log(err))
+      .then(res => this.todos = res.data)
+      .catch(err => console.log(err))
     },
     data(){
       return {
