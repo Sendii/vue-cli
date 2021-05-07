@@ -30,6 +30,11 @@
 		background: #f4f4f4;
 		padding: 10px;
 		border-bottom: 1px #ccc dotted;
+		margin: 5px;
+		border-radius: 5px;
+	}
+	.todo-item:hover{
+		background: #d1d1d1;
 	}
 	.is-complete{
 		text-decoration: line-through;
@@ -42,5 +47,12 @@
 		border-radius: 50%;
 		cursor: pointer;
 		float: right;
+	}
+	.del:hover{
+		background: #f76363;
+		color: #000;
+	}
+	input[type="checkbox"]{
+		cursor: pointer;
 	}
 </style>
