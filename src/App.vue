@@ -35,7 +35,6 @@ import Todos from './components/Todos'
     },
     methods: {
       deleteTodo(id){
-        console.log('ea')
         this.todos = this.todos.filter(todos => todos.id !== id)
       }
     }

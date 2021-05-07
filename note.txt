@@ -1,1 +1,2 @@
 1. Kalau nerima emit dari chile ke parent harus dimulai dengan tanda "@" bukan ":"
+2. Kalau mau ngirim props dengan data atau props dari parent ke anak harus menggunakan ":" agar bisa mengakses data/propsnya. Kalau tidak memerlukan data, bisa langsung dengan nama props anaknya, tanpa harus memakai ":"

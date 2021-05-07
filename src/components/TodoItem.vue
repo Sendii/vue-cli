@@ -4,7 +4,7 @@
 			<input type="checkbox" v-if="todos.completed" checked @change="markComplete">
 			<input type="checkbox" v-else @change="markComplete">
 			{{todos.title}}
-			<button @click="$emit('emDelTodo', todos.id)" class="del">x</button>
+			<button @click="$emit('emDelTodo', todos.id)" v-if="todos.completed" class="del">x</button>
 		</p>
 	</div>
 </template>
